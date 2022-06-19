@@ -32,14 +32,15 @@ export default function MainLayout({mouse}) {
                  newCoordinates(event.clientX, event.clientY)}
         >
             <div className={"main-layout__background-video"}>
-                <video
-                    muted={true}
-                    autoPlay={true}
-                    loop={true}
-                    poster={"./BG.webp"}
-                >
-                    <source src={"./Sphere_beauty_X2.webm"}/>
-                </video>
+                <img src={"./BG.webp"}/>
+                {/*<video*/}
+                {/*    muted={true}*/}
+                {/*    autoPlay={true}*/}
+                {/*    loop={true}*/}
+                {/*    poster={"./BG.webp"}*/}
+                {/*>*/}
+                {/*    <source src={"./Sphere_beauty_X2.webm"}/>*/}
+                {/*</video>*/}
             </div>
             <div className={'main-layout__background background-grid'}>
                 <div className={'background-grid__wrapper'}>

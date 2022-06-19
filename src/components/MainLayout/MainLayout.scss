@@ -63,6 +63,11 @@
     height: 100vh;
     object-fit: cover;
   }
+  &__background-video img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
 
   &__video-wrapper {
     display: block;
@@ -263,6 +268,7 @@
     background: no-repeat url("../../assets/image39.png");
   }
   &__title {
+    max-width: 300px;
     font-style: normal;
     font-weight: 400;
     font-size: 62px;
