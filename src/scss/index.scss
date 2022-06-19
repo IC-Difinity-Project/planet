@@ -1,0 +1,22 @@
+
+$maincolor: #0C0B0B;
+$fontSize: 16;
+$minWidth: 320px;
+$maxWidth: 1440;
+$maxWidthContainer: 1270;
+$fontFamily:"Roboto";
+
+@import "null";
+@import "fonts";
+
+body {
+  margin: 0;
+  font-family: 'NBInternational-Regular';
+  font-size:13px;
+  //fonts-weight: 700;
+  color:$maincolor;
+  overflow: hidden;
+}
+html {
+  overflow: -moz-scrollbars-vertical;
+}

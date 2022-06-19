@@ -1,0 +1,505 @@
+.mobile-layout {
+
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+
+  &__market-footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 50;
+    opacity: 1;
+    transition: opacity ease 0.3s;
+  }
+  &__market-footer-hide {
+    opacity: 0;
+  }
+  &__market-blue {
+    width: 100%;
+    height: 8px;
+    background: #144AC1;
+  }
+  &__market-yellow {
+    width: 100%;
+    height: 8px;
+    background: #F6C916;
+  }
+
+  &__market {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 63px;
+    background: #E21F2C;
+    //transform: rotate(-1800deg);
+    //transform-origin: 70% 50%;
+  }
+  &__market-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  &__video {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+    left: 15%;
+    width: 300px;
+    height: 180px;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  &__background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    opacity: 1;
+    transition: opacity ease 0.3s;
+  }
+  &__background-video-hide {
+    opacity: 0;
+  }
+
+  &__background-video video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  &__video-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    background: no-repeat url("../../assets/rectangle169.png") 50% 50%;
+    object-fit: contain;
+  }
+
+  &__play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    transform: translate(-50%, -50%);
+  }
+  &__play-arrow {
+    width: 10px;
+    height: 10px;
+    background: no-repeat url("../../assets/icon-play.svg") 50% 50%;
+  }
+  &__background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    z-index: 5;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas:
+    'logo-area logo-area burger-menu'
+    'menu-area info-area info-area'
+    'about-content about-content about-content'
+    'about-subtitle about-subtitle about-subtitle'
+    'footer-info2 footer-info2 footer-info2'
+    'copyright copyright copyright'
+  ;
+    width: 100%;
+    height: 100%;
+  }
+  &__about-subtitle {
+    grid-area: about-subtitle;
+    width: 100%;
+  }
+  &__logo {
+    grid-area: logo-area;
+    width: 100%;
+  }
+  &__burger-menu {
+    grid-area: burger-menu;
+    width: 100%;
+    height: 100%;
+  }
+  &__about-title {
+    grid-area: about-area;
+    width: 100%;
+    height: 100%;
+  }
+  &__menu-title {
+    grid-area: menu-area;
+    width: 100%;
+    height: 100%;
+  }
+  &__info-title {
+    grid-area: info-area;
+    width: 100%;
+    height: 100%;
+  }
+  &__about-content {
+    grid-area: about-content;
+    width: 100%;
+    height: 100%;
+  }
+  &__menu-content {
+    position: relative;
+    grid-area: menu-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+  &__footer-info1 {
+    grid-area: footer-info1;
+    width: 100%;
+    height: 100%;
+  }
+  &__footer-info2 {
+    grid-area: footer-info2;
+    width: 100%;
+    height: 100%;
+  }
+  &__copyright {
+    grid-area: copyright;
+    width: 100%;
+    height: 100%;
+  }
+}
+.mobile-menu {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  padding: 30px 10px 60px 10px;
+  transform: translateX(-150%);
+  transition: all ease 0.3s;
+  z-index: 1000;
+}
+.mobile-menu-show {
+  transform: translateX(0%);
+}
+
+.burger-menu {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px;
+
+  &__button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  &__button::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+  }
+  &__button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+    transition: width ease 0.3s;
+  }
+  &__button-open::after {
+    width: 50%;
+  }
+}
+
+.about-subtitle {
+  padding: 3%;
+  opacity: 1;
+  transition: opacity ease 0.3s;
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #FFFFFF;
+  }
+}
+.about-subtitle-hide {
+  opacity: 0;
+}
+
+.title-header-mobile {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 5%;
+  opacity: 1;
+  transition: opacity ease 0.3s;
+}
+.title-header-mobile-hide {
+  opacity: 0;
+}
+
+.logo-area-mobile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 56px;
+
+  &__left {
+    width: 50px;
+    margin-right: 5px;
+    height: 100%;
+    background: no-repeat url("../../assets/logo-left.svg") 50% 50%;
+  }
+  &__right {
+    width: 90px;
+    height: 100%;
+    background: no-repeat url("../../assets/logo-right.svg") 50% 50%;
+  }
+}
+
+.info-area-mobile {
+
+  &__coordinates {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    margin-bottom: 50px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 130%;
+    opacity: 1;
+    transition: opacity ease 0.3s;
+  }
+  &__coordinates-hide {
+    opacity: 0;
+  }
+  &__letters {
+    align-self: center;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 180px;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      //margin-left: 5px;
+      border-radius: 50%;
+      border: #FFFFFF 1px solid;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 80%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.about-content-mobile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 3%;
+  max-width: 340px;
+  opacity: 1;
+  transition: opacity ease 0.3s;
+
+  &__image {
+    position: absolute;
+    top: 3%;
+    left: 40%;
+    width: 85.8px;
+    height: 51.6px;
+    background: no-repeat url("../../assets/image39.png");
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #FFFFFF;
+  }
+}
+.about-content-mobile-hide {
+  opacity: 0;
+}
+
+.footer-info2-mobile {
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 3%;
+  opacity: 1;
+  transition: opacity ease 0.3s;
+}
+.footer-info2-mobile-hide {
+  opacity: 0;
+}
+
+.copyright-area-mobile {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 3%;
+  width: 100%;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.mobile-grid {
+
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__m-block {
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 100%">\
+      <rect x="0" y="0" width="1px" height="1px" fill="rgba(255,255,255,1)"/>\
+      <line x1="5%" y1="0%" x2="95%" y2="0%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="0%" y1="5%" x2="0%" y2="95%" stroke="rgba(255,255,255,0.5)" />\
+    </svg>');
+  }
+  &__b-block {
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 100%">\
+      <rect x="0" y="0" width="1px" height="1px" fill="rgba(255,255,255,1)"/>\
+      <rect x="0" y="99%" width="1px" height="1px" fill="rgba(255,255,255,1)"/>\
+      <line x1="5%" y1="0%" x2="95%" y2="0%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="0%" y1="5%" x2="0%" y2="95%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="5%" y1="100%" x2="95%" y2="100%" stroke="rgba(255,255,255,0.5)" />\
+    </svg>');
+  }
+  &__r-block {
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 100%">\
+      <rect x="0" y="0" width="1px" height="1px" fill="rgba(255,255,255,1)"/>\
+      <rect x="99%" y="0%" width="1px" height="1px" fill="rgba(255,255,255,1)"/>\
+      <line x1="5%" y1="0%" x2="95%" y2="0%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="0%" y1="5%" x2="0%" y2="95%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="100%" y1="5%" x2="100%" y2="95%" stroke="rgba(255,255,255,0.5)" />\
+    </svg>');
+  }
+  &__l-block {
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 100%">\
+      <rect x="0" y="0" width="1px" height="1px" fill="rgba(255,255,255,1)"/>\
+      <rect x="0" y="99%" width="1px" height="1px" fill="rgba(255,255,255,1)"/>\
+      <rect x="99%" y="0%" width="1px" height="1px" fill="rgba(255,255,255,1)"/>\
+      <rect x="99%" y="99%" width="1px" height="1px" fill="rgba(255,255,255,1)"/>\
+      <line x1="5%" y1="0%" x2="95%" y2="0%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="0%" y1="5%" x2="0%" y2="95%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="5%" y1="100%" x2="95%" y2="100%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="100%" y1="5%" x2="100%" y2="95%" stroke="rgba(255,255,255,0.5)" />\
+    </svg>');
+  }
+}
+
+.m-block {
+  grid-area: m-block;
+  width: 100%;
+  height: 100%;
+  //border: 1px solid rgba(255,255,255,0.5);
+  background-image: url('data:image/svg+xml,\
+  <line x1="100%" y1="5%" x2="100%" y2="95%" stroke="rgba(255,255,255,0.5)" />\
+  <line x1="5%" y1="100%" x2="95%" y2="100%" stroke="rgba(255,255,255,0.5)" />\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 100%">\
+      <line x1="0" y1="80" x2="100" y2="20" stroke="black" />\
+      <rect x="5%" y="1%" width="95%" height="1px" fill="rgba(255,255,255,0.5)"/>\
+      <rect x="99%" y="5%" width="1px" height="95%" fill="rgba(255,255,255,0.5)"/>\
+      <rect x="5%" y="99%" width="95%" height="1px" fill="rgba(255,255,255,0.5)"/>\
+      <line x1="5%" y1="100%" x2="95%" y2="100%" stroke="rgba(255,255,255,0.5)" />\
+    </svg>');
+}

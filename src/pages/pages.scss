@@ -1,0 +1,361 @@
+.roadmap-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+}
+
+.page-layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //transition: transform 0.5s ease-in-out;
+
+  &-open {
+    //transform: translateY(0);
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //margin: -10%;
+    background: rgba(0,0,0,0.1);
+    cursor: pointer;
+    z-index: 25;
+  }
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2% 4%;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas:
+    'close-area . . . . . . .'
+    'main-area main-area main-area main-area . . . .'
+    'slider-area slider-area slider-area slider-area slider-area slider-area slider-area slider-area'
+    'slider-area slider-area slider-area slider-area slider-area slider-area slider-area slider-area'
+  ;
+    width: 100%;
+    height: 100%;
+  }
+  &__close-area {
+    position: relative;
+    grid-area: close-area;
+    cursor: pointer;
+    z-index: 30;
+  }
+  &__main-area {
+    position: relative;
+    grid-area: main-area;
+    margin: 0px 0px -5px -10%;
+    padding-left: 10%;
+    background: #FFFFFF;
+    z-index: 30;
+  }
+  &__slider-area {
+    position: relative;
+    grid-area: slider-area;
+    margin-top: 3px;
+    margin: 3px -5% -5% -5%;
+    padding: 0 0 5% 5%;
+    background: #FFFFFF;
+    z-index: 30;
+  }
+}
+.main-area {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__number {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 130%;
+    color: #E21F2C;
+    margin: 15px 0 20px 0;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 62px;
+    line-height: 100%;
+    color: #0F0F0F;
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #000000;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+  }
+  &__next:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background: no-repeat url("../assets/icon-next.svg") 50% 50%;
+  }
+  &__next {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    border: 1px solid #E9E9E9;
+  }
+  &__prev:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background: no-repeat url("../assets/icon-prev.svg") 50% 50%;
+  }
+  &__prev {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    border: 1px solid #E9E9E9;
+  }
+}
+
+.close-area {
+  position: relative;
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: -4vw;
+    width: 4vw;
+    height: 4vw;
+    background: #E21F2C;
+  }
+  &__close {
+    width: 50%;
+    height: 50%;
+    background: no-repeat url("../assets/icon-close.svg") 50% 50%;
+  }
+}
+
+.slider-area {
+  &__container {
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 100%">\
+      <rect x="0" y="0" width="100%" height="100%" fill="rgba(0,0,0,1)"/>\
+      <polygon points="0,0 20,0 0,20" fill="rgb(255,255,255)" />\
+    </svg>');
+  }
+}
+
+.slider-roadmap {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0 40px 40px;
+}
+
+.pages-slide {
+  position: relative;
+  height: 100%;
+  padding: 45px;
+  margin-right: 20px;
+  background-image: url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100% 100%">\
+      <line x1="0%" y1="5%" x2="5%" y2="0%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="5%" y1="0%" x2="97%" y2="0%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="97%" y1="0%" x2="100%" y2="3%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="100%" y1="3%" x2="100%" y2="35%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="100%" y1="35%" x2="97%" y2="38%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="97%" y1="38%" x2="97%" y2="97%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="97%" y1="97%" x2="94%" y2="100%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="94%" y1="100%" x2="0%" y2="100%" stroke="rgba(255,255,255,0.5)" />\
+      <line x1="0%" y1="100%" x2="0%" y2="5%" stroke="rgba(255,255,255,0.5)" />\
+    </svg>');
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &__video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__video-wrapper {
+    position: relative;
+    width: 50%;
+    padding-bottom: 50%;
+  }
+  &__video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__image {}
+
+  &__label {
+    position: absolute;
+    top: 6%;
+    right: 3%;
+
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 130%;
+    letter-spacing: 0.6em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #FFFFFF;
+    z-index: 5;
+  }
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    z-index: 5;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+
+    margin-bottom: 20px;
+  }
+  &__line {
+    width: 20%;
+    height: 2px;
+    background: #FFFFFF;
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+}
+
+.swiper {
+  height: 100%;
+}
+
+@keyframes pageUp {
+  0% {
+    display: block;
+    transform: translateY(150%);
+  }
+  100% {
+    display: none;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes pageDown {
+  0% {
+    display: block;
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(150%);
+    display: none;
+  }
+}
+
+.swiper-slide, .swiper-wrapper {
+  min-width: 0 !important;
+}
+
+@media screen and (max-width: 750px) {
+  .page-layout__wrapper {
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas:
+      'close-area . .'
+      'main-area main-area main-area'
+      'main-area main-area main-area'
+      'slider-area slider-area slider-area'
+      'slider-area slider-area slider-area'
+      'slider-area slider-area slider-area'
+  ;
+  }
+  .page-layout__container {
+    padding: 10px 0;
+  }
+  .page-layout__main-area {
+    margin: 80px 0 -20px 0;
+    padding-left: 20px;
+  }
+  .close-area__container {
+    top: -65px;
+    left: 0;
+    width: 65px;
+    height: 65px;
+  }
+  .main-area__title {
+    font-size: 32px;
+  }
+  .page-layout__slider-area {
+    margin: 20px 0 0 0;
+    padding: 0 0 80px 0;
+  }
+  .slider-roadmap {
+    padding: 16px 0 16px 16px;
+  }
+  .main-area__buttons {
+    width: 25%;
+  }
+  .pages-slide {
+    padding: 20px;
+  }
+}
