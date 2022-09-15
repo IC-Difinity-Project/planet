@@ -20,20 +20,24 @@
     z-index: 10;
   }
   &__market-text {
-    width: 50%;
-    height: 100%;
-    background: no-repeat url("../../assets/icon-market.png") 50% 50%;
-    object-fit: cover;
+    //width: 50%;
+    //height: 100%;
+    //background: no-repeat url("../../assets/icon-market.png") 50% 50%;
+    //object-fit: cover;
 
-    //font-style: normal;
-    //font-weight: 400;
-    //font-size: 10px;
-    //line-height: 130%;
-    //letter-spacing: 0.32em;
-    //text-transform: uppercase;
-    //color: #FFFFFF;
-    //writing-mode: vertical-rl;
-    //text-orientation: mixed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 130%;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  &__market-container {
+    transform: rotate(180deg);
   }
 
   .main-layout__video {
@@ -191,18 +195,21 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 60px;
-  padding: 5%;
+  height: 100px;
+  padding: 5% 5% 0 5%;
 
   &__left {
-    width: 25%;
+    width: 40%;
     height: 100%;
-    background: no-repeat url("../../assets/logo-left.svg") 50% 50%;
+    background: no-repeat url("../../assets/favicon.png") 50% 50%;
+    background-size: contain;
+    margin-right: 5%;
   }
   &__right {
-    width: 100%;
+    width: 60%;
     height: 100%;
-    background: no-repeat url("../../assets/logo-right.svg") 50% 50%;
+    background: no-repeat url("../../assets/logo-right2.svg") 50% 50%;
+    background-size: contain;
   }
 }
 

@@ -82,7 +82,11 @@ export default function MainLayout({mouse}) {
                 </div>
             </div>
             <a href={"#"} className={'main-layout__market'}>
-                <div className={'main-layout__market-text'} />
+                <div className={'main-layout__market-container'} >
+                    <div className={'main-layout__market-text'} >
+                        Open marketplace
+                    </div>
+                </div>
             </a>
             <Overlay openModal={openModal} closeModal={closeModal} />
             <div className={'main-layout__content'}>
