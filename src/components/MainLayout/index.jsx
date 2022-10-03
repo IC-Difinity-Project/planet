@@ -81,7 +81,7 @@ export default function MainLayout({mouse}) {
                     <div className={'background-grid__l-block'} />
                 </div>
             </div>
-            <a href={"#"} className={'main-layout__market'}>
+            <a href="https://entrepot.app/sale" className={'main-layout__market'}>
                 <div className={'main-layout__market-container'} >
                     <div className={'main-layout__market-text'} >
                         Open marketplace
@@ -104,10 +104,10 @@ export default function MainLayout({mouse}) {
                             <p>{`${String(coordinates.z).substring(0,15)}: Z`}</p>
                         </div>
                         <ul className={'info-area__letters'}>
-                            <li><span>FB</span></li>
-                            <li><span>IN</span></li>
-                            <li><span>TW</span></li>
-                            <li><span>Y</span></li>
+                            <li><a href="https://discord.com/invite/Yxwzm9Zp">DI</a></li>
+                            <li><a href="https://twitter.com/IC_Planets">TW</a></li>
+                            <li><a href="https://dscvr.one/p/icplanets">DS</a></li>
+
                         </ul>
                     </div>
                     <div className={'main-layout__about-content about-content'}>
@@ -124,7 +124,7 @@ export default function MainLayout({mouse}) {
                     <div className={'main-layout__menu-content'}>
                         <MainMenu />
                         <div className={'main-layout__video'}>
-                            <a href={'#'} className={'main-layout__video-wrapper'}>
+                            <a target="_blank" href="https://vimeo.com/722281612" className={'main-layout__video-wrapper'}>
                                 <div className={'main-layout__img'} />
                                 <div className={'main-layout__play'}>
                                     <div className={'main-layout__play-arrow'} />
