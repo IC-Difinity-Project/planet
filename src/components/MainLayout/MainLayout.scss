@@ -195,15 +195,15 @@
   padding: 5%;
 
   &__left {
-    width: 25%;
-    height: 100%;
-    background: no-repeat url("../../assets/logo-left.svg") 50% 50%;
-  }
-  &__right {
     width: 100%;
     height: 100%;
-    background: no-repeat url("../../assets/logo-right.svg") 50% 50%;
+    background: no-repeat url("../../assets/logo_icpl.svg") 50% 50%;
   }
+ /* //&__right {
+  //  width: 100%;
+  //  height: 100%;
+  //  background: no-repeat url("../../assets/logo-right.svg") 50% 50%;
+  //}*/
 }
 
 .info-area {
