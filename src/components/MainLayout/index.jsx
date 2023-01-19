@@ -81,7 +81,7 @@ export default function MainLayout({mouse}) {
                     <div className={'background-grid__l-block'} />
                 </div>
             </div>
-            <a href="https://entrepot.app/sale" className={'main-layout__market'}>
+            <a href="https://tppkg-ziaaa-aaaal-qatrq-cai.raw.ic0.app" className={'main-layout__market'}>
                 <div className={'main-layout__market-container'} >
                     <div className={'main-layout__market-text'} >
                         Open marketplace
