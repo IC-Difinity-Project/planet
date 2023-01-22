@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { socials } from "../../constants/socials";
+import {marketLink, socials} from "../../constants/socials";
 import './MainLayout.scss';
 import MainMenu from "../MainMenu";
 import Overlay from "../Overlay";
@@ -81,7 +81,7 @@ export default function MainLayout({mouse}) {
                     <div className={'background-grid__l-block'} />
                 </div>
             </div>
-            <a href="https://tppkg-ziaaa-aaaal-qatrq-cai.raw.ic0.app" className={'main-layout__market'}>
+            <a href={marketLink} className={'main-layout__market'}>
                 <div className={'main-layout__market-container'} >
                     <div className={'main-layout__market-text'} >
                         Open marketplace

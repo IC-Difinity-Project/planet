@@ -12,3 +12,4 @@ export const socials = [
         link: "https://dscvr.one/p/icplanets"
     },
 ]
+export const marketLink = "https://tppkg-ziaaa-aaaal-qatrq-cai.raw.ic0.app"

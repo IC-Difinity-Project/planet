@@ -4,7 +4,7 @@ import './MainLayoutMobile.scss';
 import MainMenu from "../MainMenu";
 import Overlay from "../Overlay";
 import {useLocation} from "react-router-dom";
-import {socials} from "../../constants/socials";
+import {marketLink, socials} from "../../constants/socials";
 
 export default function MainLayoutMobile() {
 
@@ -102,7 +102,7 @@ export default function MainLayoutMobile() {
                     </>
                 )}
 
-                <a href={"#"} className={'mobile-layout__market'}>
+                <a href={marketLink} className={'mobile-layout__market'}>
                     <div className={'mobile-layout__market-text'} >OPEN MARKETPLACE</div>
                 </a>
             </div>
