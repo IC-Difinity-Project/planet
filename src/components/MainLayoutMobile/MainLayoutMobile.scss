@@ -334,22 +334,25 @@
     width: 180px;
 
     li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 35px;
-      height: 35px;
       //margin-left: 5px;
-      border-radius: 50%;
-      border: #FFFFFF 1px solid;
-
-      font-style: normal;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 80%;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
       color: #FFFFFF;
+      a {
+        text-decoration: none;
+        color: inherit;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: #FFFFFF 1px solid;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 80%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
     }
   }
 }

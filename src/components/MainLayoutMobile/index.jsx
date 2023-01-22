@@ -4,6 +4,7 @@ import './MainLayoutMobile.scss';
 import MainMenu from "../MainMenu";
 import Overlay from "../Overlay";
 import {useLocation} from "react-router-dom";
+import {socials} from "../../constants/socials";
 
 export default function MainLayoutMobile() {
 
@@ -83,10 +84,9 @@ export default function MainLayoutMobile() {
                     </div>
 
                     <ul className={'info-area-mobile__letters'}>
-                        <li><span>FB</span></li>
-                        <li><span>IN</span></li>
-                        <li><span>TW</span></li>
-                        <li><span>Y</span></li>
+                        {(socials || []).map((social) => (
+                            <li><a href={social.link}>{social.title}</a></li>
+                        ))}
                     </ul>
 
                 </div>

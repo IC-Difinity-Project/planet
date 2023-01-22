@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.84b2363d.css",
-    "main.js": "/static/js/main.ff9d1d4c.js",
+    "main.css": "/static/css/main.38f04d4a.css",
+    "main.js": "/static/js/main.21f056b7.js",
     "static/js/787.cb654dfe.chunk.js": "/static/js/787.cb654dfe.chunk.js",
     "static/media/NBInternational-Bold.otf": "/static/media/NBInternational-Bold.7a2956a9f1a3488579b6.otf",
     "static/media/NBInternational-Regular.otf": "/static/media/NBInternational-Regular.6a27e22c85b23673c4be.otf",
     "static/media/NBInternational-Light.otf": "/static/media/NBInternational-Light.ec1bde18baacbd224a92.otf",
     "static/media/rectangle169.png": "/static/media/rectangle169.9f0dd414f27d986c23bc.png",
-    "static/media/logo-right.svg": "/static/media/logo-right.e75b3592355f74df0a97.svg",
+    "static/media/favicon.png": "/static/media/favicon.99b56eb194ed7caabef3.png",
+    "static/media/logo-right.svg": "/static/media/logo-right.9c992d42deedc683c604.svg",
+    "static/media/logo-right2.svg": "/static/media/logo-right2.9734fe66b982b15a14b8.svg",
     "static/media/logo-left.svg": "/static/media/logo-left.0e84c9dcd5444fb68883.svg",
     "index.html": "/index.html",
     "static/media/icon-play.svg": "/static/media/icon-play.d40364cab43663cf1a88.svg",
     "static/media/icon-close.svg": "/static/media/icon-close.aeaa3d10c99c5d36bb4b.svg",
     "static/media/icon-next.svg": "/static/media/icon-next.d1c3dfec0e82bff18c02.svg",
     "static/media/icon-prev.svg": "/static/media/icon-prev.a2e3d51aa426b8f9693f.svg",
-    "main.84b2363d.css.map": "/static/css/main.84b2363d.css.map",
-    "main.ff9d1d4c.js.map": "/static/js/main.ff9d1d4c.js.map",
+    "main.38f04d4a.css.map": "/static/css/main.38f04d4a.css.map",
+    "main.21f056b7.js.map": "/static/js/main.21f056b7.js.map",
     "787.cb654dfe.chunk.js.map": "/static/js/787.cb654dfe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84b2363d.css",
-    "static/js/main.ff9d1d4c.js"
+    "static/css/main.38f04d4a.css",
+    "static/js/main.21f056b7.js"
   ]
 }

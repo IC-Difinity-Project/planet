@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-
+import { socials } from "../../constants/socials";
 import './MainLayout.scss';
 import MainMenu from "../MainMenu";
 import Overlay from "../Overlay";
@@ -104,10 +104,9 @@ export default function MainLayout({mouse}) {
                             <p>{`${String(coordinates.z).substring(0,15)}: Z`}</p>
                         </div>
                         <ul className={'info-area__letters'}>
-                            <li><a href="https://discord.com/invite/Yxwzm9Zp">DI</a></li>
-                            <li><a href="https://twitter.com/IC_Planets">TW</a></li>
-                            <li><a href="https://dscvr.one/p/icplanets">DS</a></li>
-
+                            {(socials || []).map((social) => (
+                                <li><a href={social.link}>{social.title}</a></li>
+                            ))}
                         </ul>
                     </div>
                     <div className={'main-layout__about-content about-content'}>
